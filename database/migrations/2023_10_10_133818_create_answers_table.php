@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('financial_transactions', function (Blueprint $table) {
+        Schema::create('answers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->nullable();
-            $table->string('total_amount')->nullable();
+            $table->foreignId('question_id');
+            $table->string('title');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('financial_transactions');
+        Schema::dropIfExists('answers');
     }
 };
