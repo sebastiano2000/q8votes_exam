@@ -16,7 +16,6 @@
     <link href="{{ asset('admin_assets/css/custom.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
     <div id="app">
